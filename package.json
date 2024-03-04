@@ -1,0 +1,27 @@
+{
+  "name": "actionnetwork-unsubscribe",
+  "version": "1.0.0",
+  "description": "auto-unsub from all action subs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --check index.js && semistandard && eslint index.js",
+    "start": "node --env-file=.env index.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "actionnetwork",
+    "spam",
+    "unsubscribe"
+  ],
+  "author": "Travis Hardiman",
+  "license": "Hippocratic-3.0",
+  "dependencies": {
+    "eslint": "^8.56.0",
+    "jshint": "^2.13.6",
+    "puppeteer": "^21.7.0",
+    "semistandard": "^17.0.0",
+    "standard-engine": "^15.1.0"
+  }
+}
