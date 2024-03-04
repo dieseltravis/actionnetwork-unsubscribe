@@ -37,16 +37,20 @@ console.log('Secrets?', process.env.SECRETS);
   const unsubButtonSelector = '.subscription_list_button';
   const elUnsubs = await page.$$(unsubButtonSelector);
   console.log('Found unsub buttons:', elUnsubs.length);
-  await page.waitForSelector(unsubButtonSelector);
-  await page.click(unsubButtonSelector);
+  if (elUnsubs && elUnsubs.length) {
+    await page.waitForSelector(unsubButtonSelector);
+    await page.click(unsubButtonSelector);
 
-  const confirmSelector = 'form[action^="/unsubscribe"] input[name="commit"]';
-  const elConfirms = await page.$$(confirmSelector);
-  console.log('Found confirm form buttons:', elConfirms.length);
-  const confirmFormButtonSelector = 'form[action^="/unsubscribe"] input[type="submit"]';
-  await page.waitForSelector(confirmFormButtonSelector);
-  await page.click(confirmFormButtonSelector);
-  // TODO: test with more than one
+    const confirmSelector = 'form[action^="/unsubscribe"] input[name="commit"]';
+    const elConfirms = await page.$$(confirmSelector);
+    console.log('Found confirm form buttons:', elConfirms.length);
+    const confirmFormButtonSelector = 'form[action^="/unsubscribe"] input[type="submit"]';
+    await page.waitForSelector(confirmFormButtonSelector);
+    await page.click(confirmFormButtonSelector);
+    // TODO: test with more than one
+  } else {
+    console.log('Nothing to unsubscribe from.');
+  }
 
   await browser.close();
 })();
