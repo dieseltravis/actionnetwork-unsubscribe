@@ -23,7 +23,7 @@
   "dependencies": {
     "eslint": "^8.56.0",
     "jshint": "^2.13.6",
-    "puppeteer": "^22.11.2",
+    "puppeteer": "^22.15.0",
     "semistandard": "^17.0.0",
     "standard-engine": "^15.1.0"
   }
