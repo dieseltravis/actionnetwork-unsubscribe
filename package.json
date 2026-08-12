@@ -21,11 +21,11 @@
     "url": "https://github.com/dieseltravis/actionnetwork-unsubscribe"
   },
   "dependencies": {
-    "eslint": ">=10.8.0",
-    "jshint": "^0.5.9",
+    "eslint": ">=10.8.1",
+    "jshint": "^2.13.6",
     "lodash": ">=4.18.1",
     "minimatch": ">=10.2.6",
-    "puppeteer": ">=25.4.0",
+    "puppeteer": ">=25.6.0",
     "semistandard": ">=17.0.0",
     "standard-engine": ">=15.1.0"
   },
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@eslint/eslintrc": ">=3.3.6",
     "@eslint/js": ">=10.0.1",
-    "globals": ">=17.9.0"
+    "globals": ">=17.11.0"
   },
   "semistandard": {
     "ignore": [
